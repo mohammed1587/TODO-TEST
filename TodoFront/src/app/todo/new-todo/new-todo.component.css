@@ -1,0 +1,18 @@
+
+.invalidFeedback {
+  color: red;
+  font-size: smaller;
+  padding-top: 0.2em;
+}
+
+.form-footer {
+  padding-top: 1rem;
+}
+
+.form-footer p-button {
+  margin-right: 1rem;
+}
+
+.toRight {
+  float: right;
+}

@@ -1,0 +1,21 @@
+<p-card header="Todo details" [style]="{width: '560px',margin:'0 auto'}" styleClass="ui-card-shadow">
+  <p-header>
+  </p-header>
+  <div *ngIf="todo">
+    <div>
+      ID : {{ todo.id }}
+    </div>
+    <div>
+      Name : {{ todo.name }}
+    </div>
+    <div>
+      Description : {{ todo.description }}
+    </div>
+    <div>
+      Status : {{ translate(todo.done) }}
+    </div>
+  </div>
+  <p-footer>
+    <p-button label="Todo List" [routerLink]="['']"></p-button>
+  </p-footer>
+</p-card>

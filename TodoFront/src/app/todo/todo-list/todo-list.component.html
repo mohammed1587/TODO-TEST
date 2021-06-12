@@ -1,0 +1,30 @@
+<p-card header="TODO List" [style]="{width: '800px',margin:'0 auto'}" styleClass="ui-card-shadow">
+  <p-table [value]="todos" [paginator]="true" [rows]="10">
+    <ng-template pTemplate="header">
+      <tr>
+        <th *ngFor="let col of cols">
+          {{col.header}}
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-todo>
+      <tr class="ui-selectable-row" [ngStyle]="{'textDecoration':todo.done  ? 'line-through' : '' }">
+        <td (click)="goTo(todo.id)" style="cursor: pointer" id="selectedRow">
+          <span class="ui-column-title"><a>{{todo.id}}</a></span>
+        </td>
+        <td>
+          <span class="ui-column-title">{{todo.name}}</span>
+        </td>
+        <td>
+          <div class="p-field-checkbox">
+            <p-checkbox [(ngModel)]="todo.done" (click)="changeStatus(todo.id)" binary="true"
+                        inputId="binary"></p-checkbox>
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+  <p-footer>
+    <p-button label="New TODO" [routerLink]="['/newTodo']"></p-button>
+  </p-footer>
+</p-card>

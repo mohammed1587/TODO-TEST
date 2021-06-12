@@ -1,0 +1,44 @@
+<p-card header="New Todo" [style]="{width: '560px',margin:'0 auto'}" styleClass="ui-card-shadow">
+  <p-header>
+  </p-header>
+  <form [formGroup]="formGroup" (ngSubmit)="submit()">
+    <div class="form-group">
+      <div class="ui-g ui-fluid ">
+        <!-- left column -->
+        <div class="p-col-12 p-md-6">
+
+
+          <!-- Name -->
+          <div class="container">
+            <label for="name">Name : </label>
+            <input type="text" id="name" class="form-control"
+                   formControlName="name" pInputText/>
+
+            <div *ngIf="formGroupControl.name.errors" class="invalidFeedback">This field is required</div>
+
+          </div>
+
+          <!-- description -->
+          <div class="container">
+            <label for="description">Description : </label>
+            <input type="text" id="description" class="form-control"
+                   formControlName="description" pInputText/>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="form-footer">
+      <button pButton type="submit()" [disabled]="formGroup.invalid"
+              label="Submit"></button>
+      <p-button class="toRight" label="Todo List" [routerLink]="['']"></p-button>
+
+    </div>
+  </form>
+
+
+</p-card>
+
+
+

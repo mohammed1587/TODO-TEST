@@ -1,0 +1,10 @@
+.list-footer {
+  padding-top: 1rem;}
+
+.list-footer p-button {
+  margin-right: 1rem;
+}
+
+#selectedRow:hover{
+  background: cornflowerblue;
+}
