@@ -44,8 +44,6 @@ You're working in the WebFactory which provides the following technical recommen
 - The backend application should be based on Java
 - To keep the UI simple
 - Code quality is very important, so all the code has to be covered by unit tests
-- Each user story should be realized in its own commit on master
-- The product owner is curious and likes to read the application code on Github and test it via Github Pages
-
+  
 
 
